@@ -1,0 +1,22 @@
+load app - check if known public address
+if astronaut go to picture 9. 
+
+Otherwise:
+
+picture 1 - click to continue
+
+picture 2 - display totalSupply, cashSupply, click to continue
+
+picture 3 - display totalSupply, cashSupply, click to continue
+
+picture 4 - submit transaction to function depositCash(add astronaut, add to cash balance, mint tokens,) receive transaction response as true to proceed. 10 tokens are minted.
+
+picture 5 - display totalSupply, cashSupply, address balance, click to continue
+
+picture 6 - submit transaction to rideRocket (reduce token balance) . User must send 9 tokens to smart contract address. Receive transaction response as true to proceed.
+
+picture 7 - click to continue
+
+picture 8 - click to continue
+
+picture 9 - display totalSupply, cashSupply, address balance
