@@ -1,5 +1,5 @@
 const { decodeLogs } = require('./helpers/decodeLogs');
-const SimpleToken = artifacts.require('Bank');
+const Bank = artifacts.require('Bank');
 
 contract('Bank', accounts => {
   let token;
