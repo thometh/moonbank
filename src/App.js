@@ -108,7 +108,7 @@ class App extends Component {
       bank.deployed().then((instance) => {
         bankInstance = instance;
         console.log("contract address : " + bankInstance.address);
-        return bankInstance.rideRocket(bankInstance.address, 9, {from: coinbase});
+        return bankInstance.rideLunarModule(bankInstance.address, 9, {from: coinbase});
       }).then((result)=>{
         this.nextImage();
       }).catch(function (err) {
@@ -166,15 +166,15 @@ class App extends Component {
               <br/>
               {(currentIndex + 1 == 2 || currentIndex + 1 == 3 || currentIndex + 1 == 5 || currentIndex + 1 == 9) &&
                 <div>
-                    <h2> Total Supply: {totalSupply}</h2>
-                    <h2> Cash Supply: {cashSupply}</h2>
+                    <h2> Total moonbucks issued: {totalSupply}</h2>
+                    <h2> Total cash in reserve: ${cashSupply}</h2>
                 </div>}
 
-              {(currentIndex + 1 == 5 || currentIndex + 1 == 9) && <h2> Address Balance: {addressBalance}</h2>}
+              {(currentIndex + 1 == 5 || currentIndex + 1 == 9) && <h2> Personal moonbank balance: {addressBalance} moonbuck(s)</h2>}
             </div>
           </div>
           { currentIndex + 1 == 4 && <button className="btn btn-success next-button" onClick={this.sendTransaction}>Deposit cash...</button>}
-          { currentIndex + 1 == 6 && <button className="btn btn-success next-button" onClick={this.sendToContractAddress}>Ride the lunar... module</button>}
+          { currentIndex + 1 == 6 && <button className="btn btn-success next-button" onClick={this.sendToContractAddress}>Ride the lunar module...</button>}
           {  !isEndofScreen && !visibleTransactionBtn && <button className="btn btn-success next-button" onClick={this.nextImage}>Next</button> }
         </main>
       </div>

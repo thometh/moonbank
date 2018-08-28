@@ -95,7 +95,7 @@ contract Bank {
     }
 
 
-    function rideRocket(address to, uint256 value) public returns (bool success) {
+    function rideLunarModule(address to, uint256 value) public returns (bool success) {
         require(balances[msg.sender] >= value);
         require(value == 9);
         require(to == address(this));
