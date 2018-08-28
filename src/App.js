@@ -148,7 +148,7 @@ class App extends Component {
   render() {
 
     const { currentIndex, totalCount, totalSupply, cashSupply, canRide, addressBalance } = this.state;
-    let currentImage = `/images/${currentIndex + 1}.png`
+    let currentImage = `/images/${currentIndex + 1}.jpg`
 
     let visibleTransactionBtn = false;
     let isEndofScreen = false;
@@ -174,7 +174,7 @@ class App extends Component {
             </div>
           </div>
           { currentIndex + 1 == 4 && <button className="btn btn-success next-button" onClick={this.sendTransaction}>Deposit cash...</button>}
-          { currentIndex + 1 == 6 && <button className="btn btn-success next-button" onClick={this.sendToContractAddress}>Ride the rocket back to Earth</button>}
+          { currentIndex + 1 == 6 && <button className="btn btn-success next-button" onClick={this.sendToContractAddress}>Ride the lunar... module</button>}
           {  !isEndofScreen && !visibleTransactionBtn && <button className="btn btn-success next-button" onClick={this.nextImage}>Next</button> }
         </main>
       </div>
