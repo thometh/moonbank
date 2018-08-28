@@ -170,7 +170,7 @@ class App extends Component {
                     <h2> Total cash in reserve: ${cashSupply}</h2>
                 </div>}
 
-              {(currentIndex + 1 == 5 || currentIndex + 1 == 9) && <h2> Personal moonbank balance: {addressBalance} moonbuck(s)</h2>}
+              {(currentIndex + 1 == 5 || currentIndex + 1 == 9) && <h2> Personal balance: {addressBalance} moonbuck(s)</h2>}
             </div>
           </div>
           { currentIndex + 1 == 4 && <button className="btn btn-success next-button" onClick={this.sendTransaction}>Deposit cash...</button>}
