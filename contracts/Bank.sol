@@ -12,6 +12,7 @@ uint public decimals = 0;
     mapping (address => bool) astronauts;
     mapping(address => mapping(address => uint256)) public allowed;
 
+    // Initial amounts for tokens and cash
     uint256 public totalSupply = 1000;
     uint256 public cashSupply = 1000;
 
@@ -28,10 +29,13 @@ uint public decimals = 0;
         return balances[_owner];
     }
 
+
+    //Determines whether a user has already become an astronaut
     function canRide(address recipient) public view returns (bool) {
         return (astronauts[recipient] == false);
     }
 
+    //Sets a user as an astronaut and updates the cashSupply, totalSupply, and balance
     function depositCash(address to, uint256 amount) public returns (bool success) {
         require(amount == 10);
         require(astronauts[to] == false);
@@ -43,6 +47,7 @@ uint public decimals = 0;
         return true;
     }
 
+    //Function to kick off the Lunar Module
     function rideLunarModule(address to, uint256 value) public returns (bool success) {
         require(balances[msg.sender] >= value);
         require(value == 9);
@@ -52,5 +57,6 @@ uint public decimals = 0;
         emit Transfer(msg.sender, to, value);
         return true;
     }
+
 
 }
