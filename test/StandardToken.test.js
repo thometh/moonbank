@@ -1,5 +1,5 @@
-const { assertRevert } = require('../../helpers/assertRevert');
-const StandardTokenMock = artifacts.require('StandardTokenMock');
+const { assertRevert } = require('openzeppelin-solidity/test/helpers/assertRevert');
+const StandardTokenMock = artifacts.require('Bank');
 
 contract('StandardToken', function ([_, owner, recipient, anotherAccount]) {
   const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
