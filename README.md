@@ -18,7 +18,7 @@ Although I was unable to finish the test cases the app should work as follows:
 
 6) Input "npm run start" in terminal
 
-7) The app should start. 
+7) The app should start.
 
-Changing accounts and refreshing the page should allow the user to start from the beginning of the app and keep past interactions uptodate on the the ganache instance.
-
+Changing accounts and refreshing the page should allow the user to start from the beginning of the app.
+The app should continue to update balances accordingly. This app uses metamask. Please clear accounts before using them on metamask to avoid network artifacts.
